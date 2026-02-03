@@ -1,0 +1,254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.6">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="ru"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Экспедиция: Таежный Мерч — Официальный магазин&lt;/title&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Подключение внешних ресурсов для дизайна и иконок --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://unpkg.com/lucide@latest"&gt;&lt;/script&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* Интеграция шрифтов: антиква для заголовков и моноширинный для технических пометок */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,700;1,400&amp;family=IBM+Plex+Mono:wght@400;600&amp;display=swap');</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>:root {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>--paper: #e8e2d6; /* Оттенок старой бумаги */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>--ink: #1a1c1e; <span class="Apple-converted-space">  </span>/* Цвет чернил */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>--moss: #3e4b3e;<span class="Apple-converted-space">  </span>/* Цвет хвои */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'Crimson Pro', serif;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: var(--paper);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: var(--ink);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>/* Текстура миллиметровки на фоне */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-image: radial-gradient(circle at 2px 2px, rgba(0,0,0,0.05) 1px, transparent 0);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-size: 40px 40px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.typewriter {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'IBM Plex Mono', monospace;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* Стиль "рисованной" рамки с тенью */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.sketch-border {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 2px solid var(--ink);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 6px 6px 0px var(--ink);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: all 0.2s ease;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.sketch-border:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: translate(-2px, -2px);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 10px 10px 0px var(--ink);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* Наложение текстуры пергамента */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.paper-texture {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: relative;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.paper-texture::before {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>content: "";</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: absolute;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>top: 0; left: 0; right: 0; bottom: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-image: url('https://www.transparenttextures.com/patterns/parchment.png');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>opacity: 0.3;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>pointer-events: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>z-index: 1;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* Фоновые топографические линии */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.topo-bg {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-image: url("data:image/svg+xml,%3Csvg width='400' height='400' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 100 Q 50 50 100 100 T 200 100 T 300 100 T 400 100 M0 200 Q 100 150 200 200 T 400 200 M0 300 Q 150 250 300 300 T 400 300' stroke='rgba(0,0,0,0.04)' fill='transparent'/%3E%3C/svg%3E");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* Основная кнопка в стиле экспедиции */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.btn-expedition {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: var(--ink);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: var(--paper);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'IBM Plex Mono', monospace;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 1.2rem 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-transform: uppercase;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>letter-spacing: 1.5px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: all 0.3s;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: inline-flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>gap: 0.75rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-decoration: none;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.btn-expedition:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: var(--moss);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: translateY(-2px);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* Контейнер для изображений с эффектом смены при наведении */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.product-image-container {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.img-primary {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: opacity 0.5s ease-in-out;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>filter: contrast(1.1) brightness(0.95) sepia(5%);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.img-secondary {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: absolute;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>top: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>left: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: calc(100% - 2rem);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: calc(100% - 2rem);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>opacity: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: opacity 0.5s ease-in-out;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>filter: contrast(1.1) brightness(0.95) sepia(5%);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.product-card:hover .img-primary { opacity: 0; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.product-card:hover .img-secondary { opacity: 1; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* Кастомизация полосы прокрутки */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>::-webkit-scrollbar { width: 10px; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>::-webkit-scrollbar-track { background: var(--paper); }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>::-webkit-scrollbar-thumb { background: var(--ink); border: 2px solid var(--paper); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body class="paper-texture topo-bg min-h-screen selection:bg-moss selection:text-white"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Секция навигации --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;header class="border-b-2 border-black py-10 px-6 relative z-10"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="text-center md:text-left"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;span class="typewriter text-xs uppercase tracking-[0.3em] font-bold opacity-50"&gt;Архив экспедиции / Лимитированная серия&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h1 class="text-5xl md:text-6xl font-black tracking-tighter mt-2 uppercase"&gt;Тайга &amp; Графика&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="italic text-xl text-gray-800 mt-2 font-medium"&gt;Связь с проводником — через Telegram&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="flex items-center gap-10"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;nav class="hidden sm:flex gap-8 typewriter text-xs uppercase font-bold tracking-widest"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;a href="#shop" class="hover:text-moss transition-colors"&gt;Коллекция&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/nav&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Ссылка на профиль Telegram --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="https://t.me/OlgaAgni" target="_blank" class="tg-link flex items-center gap-3 bg-white p-3 sketch-border hover:bg-zinc-50 transition-colors"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;i data-lucide="send" class="w-6 h-6"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="typewriter text-xs font-bold uppercase hidden md:inline"&gt;Написать Ольге&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Главный блок / Манифест --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="py-24 px-6 max-w-4xl mx-auto text-center relative z-10"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="mb-10 opacity-30"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;i data-lucide="mountain" class="w-16 h-16 mx-auto mb-4"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2 class="text-4xl md:text-5xl font-bold mb-8 italic leading-tight"&gt;«Тайга не прощает суеты. Только спокойствие и верное плечо».&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="h-1 w-24 bg-black mx-auto mb-10"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="text-xl leading-relaxed mb-8 typewriter text-sm md:text-base opacity-80 max-w-2xl mx-auto"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>Здесь отсутствуют автоматизированные системы. Каждое приобретение — это персональное взаимодействие. Выберите интересующую модель и инициируйте диалог в Telegram для уточнения деталей.</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Витрина продукции --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="shop" class="pb-40 px-6 relative z-10"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20"&gt;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Изделие 1: Dersu Uzala --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="product-card group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="sketch-border product-image-container mb-8 overflow-hidden h-[600px]"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;!-- Основное изображение --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;img src="dersu_uzala_1.jpg"<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                         </span>onerror="this.src='https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&amp;fit=crop&amp;q=80&amp;w=800'"<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                         </span>alt="[Изображение футболки Dersu Uzala]"<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                         </span>class="img-primary w-full h-full object-cover"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;!-- Дополнительное изображение (появляется при наведении) --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;img src="dersu_uzala_2.jpg"<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                         </span>onerror="this.src='https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&amp;fit=crop&amp;q=80&amp;w=800'"<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                         </span>alt="[Изображение футболки Dersu Uzala - детали]"<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                         </span>class="img-secondary object-cover"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="absolute bottom-4 right-4 bg-white/90 px-3 py-1 typewriter text-[10px] uppercase font-bold border border-black z-10"&gt;Отчет: 01-A&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="flex justify-between items-start mb-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="typewriter text-xs uppercase font-bold tracking-widest opacity-50 mb-2 block"&gt;Посвящение Акире Куросаве&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="text-4xl font-black uppercase"&gt;«Dersu Uzala»&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="text-3xl font-bold italic block"&gt;3 500 ₽&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="mb-8 italic text-lg text-gray-700 leading-relaxed border-l-4 border-black pl-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>Графический портрет великого гольда на фоне титров легендарного фильма. Стиль «черная тушь».</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="https://t.me/OlgaAgni" target="_blank" class="btn-expedition w-full"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;i data-lucide="send" class="w-5 h-5"&gt;&lt;/i&gt; Заказать в Telegram</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Изделие 2: Spirit of Yambuya --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="product-card group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="sketch-border product-image-container mb-8 overflow-hidden h-[600px]"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;!-- Основное изображение --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;img src="yambuya_1.jpg"<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                         </span>onerror="this.src='https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&amp;fit=crop&amp;q=80&amp;w=800'"<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                         </span>alt="[Изображение футболки Дух Ямбуя]"<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                         </span>class="img-primary w-full h-full object-cover"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;!-- Дополнительное изображение (появляется при наведении) --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;img src="yambuya_2.jpg"<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                         </span>onerror="this.src='https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&amp;fit=crop&amp;q=80&amp;w=800'"<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                         </span>alt="[Изображение футболки Дух Ямбуя - детали]"<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                         </span>class="img-secondary object-cover"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="absolute bottom-4 right-4 bg-white/90 px-3 py-1 typewriter text-[10px] uppercase font-bold border border-black z-10"&gt;Отчет: 02-B&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="flex justify-between items-start mb-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="typewriter text-xs uppercase font-bold tracking-widest opacity-50 mb-2 block"&gt;По мотивам повести Г. Федосеева&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="text-4xl font-black uppercase"&gt;«Дух Ямбуя»&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="text-3xl font-bold italic block"&gt;3 700 ₽&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="mb-8 italic text-lg text-gray-700 leading-relaxed border-l-4 border-black pl-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>Сложная многофигурная композиция: геодезисты, таежный лагерь и затаившийся в лесу хозяин тайги.</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="https://t.me/OlgaAgni" target="_blank" class="btn-expedition w-full"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;i data-lucide="send" class="w-5 h-5"&gt;&lt;/i&gt; Заказать в Telegram</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Подвал сайта --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;footer class="bg-black text-white py-32 px-6 text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="text-2xl italic mb-8"&gt;«Мы храним память о людях, которые не боялись неизведанного».&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="typewriter text-[10px] opacity-30 uppercase tracking-[0.2em]"&gt;© 2026 Taiga Expedition Merch&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/footer&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Скрипт инициализации иконок --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>lucide.createIcons();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
